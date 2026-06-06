@@ -1,16 +1,39 @@
-# React + Vite
+# Ecommerce Full Stack Design
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a full-stack ecommerce web application developed as part of the DevelopersHub Corporation Full-Stack Development Internship.
 
-Currently, two official plugins are available:
+## Week 1 Progress
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Completed Pages
 
-## React Compiler
+- Home Page
+- Product Listing Page
+- Product Details Page
+- Cart Page
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Features Completed
 
-## Expanding the ESLint configuration
+- Responsive frontend layout
+- Desktop and mobile views
+- Product cards
+- Product search
+- Category filter
+- Product details routing
+- Add to cart functionality
+- Cart quantity update
+- Remove from cart
+- Clear cart
+- Cart data saved in localStorage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React.js
+- Vite
+- Tailwind CSS
+- React Router DOM
+- Node.js
+- Express.js
+
+## Current Status
+
+Week 1 frontend development is completed. Backend and dynamic database integration will be completed in the next phase.

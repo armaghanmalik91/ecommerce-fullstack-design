@@ -28,7 +28,7 @@ function Navbar() {
         <nav className="hidden lg:flex items-center gap-6 text-gray-700 font-medium">
           <Link to="/" className="hover:text-blue-600">Home</Link>
           <Link to="/products" className="hover:text-blue-600">Products</Link>
-          <Link to="/cart" className="hover:text-blue-600">Cart</Link>
+          <Link to="/cart" className="hover:text-blue-600">🛒</Link>
           <a href="#" className="hover:text-blue-600">Login</a>
         </nav>
 
