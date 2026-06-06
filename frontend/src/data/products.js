@@ -5,7 +5,10 @@ export const products = [
     category: "Electronics",
     price: 45,
     oldPrice: 60,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500",
+    stock: 25,
+    description:
+      "A stylish smart watch with fitness tracking, heart rate monitoring, and long battery life. Perfect for daily use and workouts.",
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800",
   },
   {
     id: 2,
@@ -13,7 +16,10 @@ export const products = [
     category: "Accessories",
     price: 35,
     oldPrice: 50,
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+    stock: 18,
+    description:
+      "Comfortable wireless headphones with clear sound quality, soft ear cushions, and strong battery backup for music and calls.",
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800",
   },
   {
     id: 3,
@@ -21,7 +27,10 @@ export const products = [
     category: "Fashion",
     price: 80,
     oldPrice: 110,
-    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500",
+    stock: 12,
+    description:
+      "A modern casual jacket designed for comfort and style. Suitable for daily wear, travel, and winter fashion looks.",
+    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800",
   },
   {
     id: 4,
@@ -29,7 +38,10 @@ export const products = [
     category: "Home",
     price: 120,
     oldPrice: 150,
-    image: "https://images.unsplash.com/photo-1503602642458-232111445657?w=500",
+    stock: 10,
+    description:
+      "A comfortable modern chair with a clean design. Ideal for home, office, study rooms, and minimal interior setups.",
+    image: "https://images.unsplash.com/photo-1503602642458-232111445657?w=800",
   },
   {
     id: 5,
@@ -37,7 +49,10 @@ export const products = [
     category: "Sports",
     price: 65,
     oldPrice: 90,
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+    stock: 30,
+    description:
+      "Lightweight running shoes with strong grip, soft cushioning, and breathable material for sports and daily walking.",
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
   },
   {
     id: 6,
@@ -45,6 +60,9 @@ export const products = [
     category: "Bags",
     price: 40,
     oldPrice: 55,
-    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500",
+    stock: 20,
+    description:
+      "A durable travel backpack with multiple pockets, strong zippers, and enough space for laptop, clothes, and accessories.",
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800",
   },
 ]
