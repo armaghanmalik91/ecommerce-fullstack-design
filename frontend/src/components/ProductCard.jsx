@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom"
+import { useCart } from "../context/CartContext"
 
 function ProductCard({ product }) {
+  const { addToCart } = useCart()
+
   return (
     <div className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition w-full min-w-0">
       <Link to={`/product/${product.id}`}>
@@ -31,7 +34,10 @@ function ProductCard({ product }) {
           </span>
         </div>
 
-        <button className="w-full mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+        <button
+          onClick={() => addToCart(product)}
+          className="w-full mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+        >
           Add to Cart
         </button>
       </div>

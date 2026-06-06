@@ -28,7 +28,7 @@ function Navbar() {
         <nav className="hidden lg:flex items-center gap-6 text-gray-700 font-medium">
           <Link to="/" className="hover:text-blue-600">Home</Link>
           <Link to="/products" className="hover:text-blue-600">Products</Link>
-          <a href="#" className="hover:text-blue-600">Cart</a>
+          <Link to="/cart" className="hover:text-blue-600">Cart</Link>
           <a href="#" className="hover:text-blue-600">Login</a>
         </nav>
 
@@ -70,13 +70,13 @@ function Navbar() {
               Products
             </Link>
 
-            <a
-              href="#"
+            <Link
+              to="/cart"
               onClick={() => setIsMenuOpen(false)}
               className="px-4 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600"
             >
               Cart
-            </a>
+            </Link>
 
             <a
               href="#"

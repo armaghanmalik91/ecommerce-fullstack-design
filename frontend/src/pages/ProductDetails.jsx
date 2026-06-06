@@ -2,10 +2,12 @@ import { Link, useParams } from "react-router-dom"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import { products } from "../data/products"
+import { useCart } from "../context/CartContext"
 
 function ProductDetails() {
   const { id } = useParams()
   const product = products.find((item) => item.id === Number(id))
+  const { addToCart } = useCart()
 
   if (!product) {
     return (
@@ -98,7 +100,10 @@ function ProductDetails() {
               </div>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700">
+                <button
+                  onClick={() => addToCart(product)}
+                  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700"
+                >
                   Add to Cart
                 </button>
 
