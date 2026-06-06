@@ -1,13 +1,18 @@
+import { useState } from "react"
+import { Link } from "react-router-dom"
+
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
-        <div className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
             E
           </div>
           <h1 className="text-xl font-bold text-gray-800">Ecommerce</h1>
-        </div>
+        </Link>
 
         <div className="hidden md:flex flex-1 max-w-xl">
           <input
@@ -21,13 +26,16 @@ function Navbar() {
         </div>
 
         <nav className="hidden lg:flex items-center gap-6 text-gray-700 font-medium">
-          <a href="#" className="hover:text-blue-600">Home</a>
-          <a href="#" className="hover:text-blue-600">Products</a>
+          <Link to="/" className="hover:text-blue-600">Home</Link>
+          <Link to="/products" className="hover:text-blue-600">Products</Link>
           <a href="#" className="hover:text-blue-600">Cart</a>
           <a href="#" className="hover:text-blue-600">Login</a>
         </nav>
 
-        <button className="lg:hidden bg-gray-100 px-3 py-2 rounded-lg text-gray-700">
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="lg:hidden bg-gray-100 px-3 py-2 rounded-lg text-gray-700"
+        >
           Menu
         </button>
       </div>
@@ -42,6 +50,44 @@ function Navbar() {
           Go
         </button>
       </div>
+
+      {isMenuOpen && (
+        <div className="lg:hidden bg-white border-t border-gray-200 px-4 py-4">
+          <nav className="flex flex-col gap-3 text-gray-700 font-medium">
+            <Link
+              to="/"
+              onClick={() => setIsMenuOpen(false)}
+              className="px-4 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600"
+            >
+              Home
+            </Link>
+
+            <Link
+              to="/products"
+              onClick={() => setIsMenuOpen(false)}
+              className="px-4 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600"
+            >
+              Products
+            </Link>
+
+            <a
+              href="#"
+              onClick={() => setIsMenuOpen(false)}
+              className="px-4 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600"
+            >
+              Cart
+            </a>
+
+            <a
+              href="#"
+              onClick={() => setIsMenuOpen(false)}
+              className="px-4 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600"
+            >
+              Login
+            </a>
+          </nav>
+        </div>
+      )}
     </header>
   )
 }
