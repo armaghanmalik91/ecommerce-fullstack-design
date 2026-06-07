@@ -1,10 +1,22 @@
 @import "tailwindcss";
 
+html,
+body {
+  overflow-x: hidden;
+  background: #0f172a;
+}
+
 button,
 a {
   transition: all 0.2s ease;
 }
 
-button:active {
+button:active,
+a:active {
   transform: scale(0.97);
+}
+
+::selection {
+  background: #f59e0b;
+  color: #111827;
 }

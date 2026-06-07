@@ -8,9 +8,16 @@ export function CartProvider({ children }) {
     return savedCart ? JSON.parse(savedCart) : []
   })
 
+  const [message, setMessage] = useState("")
+
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems))
   }, [cartItems])
+
+  const showMessage = (text) => {
+    setMessage(text)
+    setTimeout(() => setMessage(""), 1800)
+  }
 
   const addToCart = (product) => {
     setCartItems((prevItems) => {
@@ -26,6 +33,8 @@ export function CartProvider({ children }) {
 
       return [...prevItems, { ...product, quantity: 1 }]
     })
+
+    showMessage(`${product.name} added to basket`)
   }
 
   const increaseQuantity = (id) => {
@@ -72,9 +81,16 @@ export function CartProvider({ children }) {
         clearCart,
         totalItems,
         totalPrice,
+        message,
       }}
     >
       {children}
+
+      {message && (
+        <div className="fixed top-24 right-4 z-[999] bg-slate-900 border border-amber-400 text-white px-5 py-3 rounded-xl shadow-2xl shadow-amber-500/20 text-sm font-medium">
+          ✅ {message}
+        </div>
+      )}
     </CartContext.Provider>
   )
 }
